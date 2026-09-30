@@ -50,14 +50,14 @@ jobs:
             --yes \
             --environment=production \
             --token=${{ secrets.VERCEL_TOKEN }} \
-            --scope=${{ secrets.VERCEL_ORG_ID }}
+            --scope=${{ secrets.ORG_ID }}
 
       - name: Build
         run: |
           vercel build \
             --prod \
             --token=${{ secrets.VERCEL_TOKEN }} \
-            --scope=${{ secrets.VERCEL_ORG_ID }}
+            --scope=${{ secrets.ORG_ID }}
 
       - name: Deploy
         run: |
@@ -65,4 +65,4 @@ jobs:
             --prebuilt \
             --prod \
             --token=${{ secrets.VERCEL_TOKEN }} \
-            --scope=${{ secrets.VERCEL_ORG_ID }}
+            --scope=${{ secrets.ORG_ID }}
